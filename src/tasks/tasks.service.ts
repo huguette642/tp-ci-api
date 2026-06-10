@@ -19,7 +19,6 @@ export class TasksService {
   constructor(private readonly db: DatabaseService) {}
 
   create(createTaskDto: CreateTaskDto): Task {
-    const logMessage = 'Creating task';
     const result = this.db.db
       .prepare('INSERT INTO task (title, content, done) VALUES (?, ?, ?)')
       .run(
