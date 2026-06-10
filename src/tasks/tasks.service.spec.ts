@@ -62,7 +62,7 @@ describe('TasksService', () => {
       const result = service.findAll();
 
       // BUG: on insère 1 tâche mais l'assertion attend 2
-      expect(result).toHaveLength(2);
+      expect(result).toHaveLength(1);
     });
   });
 
